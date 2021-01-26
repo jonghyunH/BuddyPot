@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnBluetoothOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="블루투스 ON"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBluetoothOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="블루투스 OFF"
+        app:layout_constraintStart_toEndOf="@+id/btnBluetoothOn"
+        app:layout_constraintTop_toTopOf="@+id/btnBluetoothOn" />
+
+    <TextView
+        android:id="@+id/tvBluetoothStatus"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:text="status"
+        app:layout_constraintStart_toStartOf="@+id/btnBluetoothOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnBluetoothOn" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text="연결하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintStart_toEndOf="@+id/btnBluetoothOff"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvReceiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receive"
+        app:layout_constraintBottom_toTopOf="@+id/tvSendData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
+
+    <Button
+        android:id="@+id/btnSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="전송"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="@+id/btnBluetoothOn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tvSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Send Data"
+        app:layout_constraintStart_toEndOf="@+id/btnSendData"
+        app:layout_constraintTop_toTopOf="@+id/btnSendData" />
+
+    <Button
+        android:id="@+id/btn_speaker_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SPEAKER ON"
+        app:layout_constraintStart_toStartOf="@+id/btnSendData"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendData" />
+
+    <Button
+        android:id="@+id/btn_speaker_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="SPEAKER OFF"
+        app:layout_constraintStart_toStartOf="@+id/btn_speaker_on"
+        app:layout_constraintTop_toBottomOf="@+id/btn_speaker_on" />
+
+    <Button
+        android:id="@+id/btn_pair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="PAIR"
+        app:layout_constraintStart_toEndOf="@+id/btn_speaker_on"
+        app:layout_constraintTop_toTopOf="@+id/btn_speaker_on" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="습도"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/pbar_humid"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="@+id/pbar_humid"
+        app:layout_constraintTop_toBottomOf="@+id/pbar_humid" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="온도"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/pbar_temp"
+        app:layout_constraintStart_toStartOf="@+id/pbar_temp"
+        app:layout_constraintTop_toBottomOf="@+id/pbar_temp" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/pbar_humid"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+
+        app:layout_constraintStart_toEndOf="@+id/pbar_temp"
+        app:layout_constraintTop_toTopOf="@+id/pbar_temp"
+        app:progress_end_color="#25B3FF"
+        app:progress_start_color="#C0E9FF"
+        app:progress_stroke_width="5dp"
+        app:progress_style="solid_line"
+        app:progress_shader = "sweep"
+        app:progress_stroke_cap="round"
+        app:progress_text_color="#265EFF"
+        app:progress_text_size="20dp" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/pbar_temp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_speaker_off"
+        app:progress_end_color="#DA2329"
+        app:progress_shader="sweep"
+        app:progress_start_color="#5276F8"
+        app:progress_stroke_cap="round"
+        app:progress_stroke_width="5dp"
+        app:progress_style="solid_line"
+        app:progress_text_color="#FF4F77"
+        app:progress_text_size="20dp" />
+
+    <Button
+        android:id="@+id/btn_fan_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="FAN ON"
+        app:layout_constraintStart_toEndOf="@+id/btn_speaker_off"
+        app:layout_constraintTop_toTopOf="@+id/btn_speaker_off" />
+
+    <Button
+        android:id="@+id/btn_fan_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="FAN OFF"
+        app:layout_constraintStart_toEndOf="@+id/btn_fan_on"
+        app:layout_constraintTop_toTopOf="@+id/btn_fan_on" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
