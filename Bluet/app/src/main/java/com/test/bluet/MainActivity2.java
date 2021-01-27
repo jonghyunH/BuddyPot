@@ -98,27 +98,27 @@ public class MainActivity2 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
 
-        View v = inflater.inflate(R.layout.activity_main2,container,false);
+        View view = inflater.inflate(R.layout.activity_main2, container, false);
 
-        mTvBluetoothStatus = v.findViewById(R.id.tvBluetoothStatus);
-        mTvReceiveData = v.findViewById(R.id.tvReceiveData);
-        mTvTimer = v.findViewById(R.id.tvTimer);
-        mTvSendData =  v.findViewById(R.id.tvSendData);
-        mBtnBluetoothOn = v.findViewById(R.id.btnBluetoothOn);
-        mBtnBluetoothOff = v.findViewById(R.id.btnBluetoothOff);
-        mBtnConnect = v.findViewById(R.id.btnConnect);
-        mBtnSendData = v.findViewById(R.id.btnSendData);
+        mTvBluetoothStatus = view.findViewById(R.id.tvBluetoothStatus);
+        mTvReceiveData = view.findViewById(R.id.tvReceiveData);
+        mTvTimer = view.findViewById(R.id.tvTimer);
+        mTvSendData =  view.findViewById(R.id.tvSendData);
+        mBtnBluetoothOn = view.findViewById(R.id.btnBluetoothOn);
+        mBtnBluetoothOff = view.findViewById(R.id.btnBluetoothOff);
+        mBtnConnect = view.findViewById(R.id.btnConnect);
+        mBtnSendData = view.findViewById(R.id.btnSendData);
 
-        mBtnSpeakerOn = v.findViewById(R.id.btn_speaker_on);
-        mBtnSpeakerOff = v.findViewById(R.id.btn_speaker_off);
-        mBtnFanOn = v.findViewById(R.id.btn_fan_on);
-        mBtnFanOff = v.findViewById(R.id.btn_fan_off);
-        mBtnPair = v.findViewById(R.id.btn_pair);
+        mBtnSpeakerOn = view.findViewById(R.id.btn_speaker_on);
+        mBtnSpeakerOff = view.findViewById(R.id.btn_speaker_off);
+        mBtnFanOn = view.findViewById(R.id.btn_fan_on);
+        mBtnFanOff = view.findViewById(R.id.btn_fan_off);
+        mBtnPair = view.findViewById(R.id.btn_pair);
 
         context_main = getActivity().getApplicationContext();
 
-        CircleProgressBar mPbar_temp = v.findViewById(R.id.pbar_temp);
-        CircleProgressBar mPbar_humid = v.findViewById(R.id.pbar_humid);
+        CircleProgressBar mPbar_temp = view.findViewById(R.id.pbar_temp);
+        CircleProgressBar mPbar_humid = view.findViewById(R.id.pbar_humid);
         mPbar_temp.setMax(50);
         mPbar_temp.setProgressFormatter(new MyProgressFormatter());
 
@@ -236,7 +236,7 @@ public class MainActivity2 extends Fragment {
             }
         };
 
-        return inflater.inflate(R.layout.activity_main2, container, false);
+        return view;
     }
 
     public class Timer_thread extends Thread {
